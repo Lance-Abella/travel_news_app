@@ -8,28 +8,33 @@ import 'post.dart';
 import 'small_card.dart';
 
 class Homepage extends StatelessWidget {
+
   Map<String, dynamic> bigCardContent = {
-    "background": ["assets/bg1.png", "assets/bg1.png", "assets/bg1.png"],
-    "text1": ["Feel the thrill on the only", "Feel the thrill on the only", "Feel the thrill on the only"],
-    "text2": ["surf simulator in Maldives 2022", "surf simulator in Maldives 2022", "surf simulator in Maldives 2022"],
-    "profile": ["assets/profile1.png", "assets/profile1.png", "assets/profile1.png"],
-    "text3": ["Sang Dong-Min", "Sang Dong-Min", "Sang Dong-Min"],
-    "text4": ["Sep 9, 2022", "Sep 9, 2022", "Sep 9,2022"],
+    "background": ["assets/Boracay.png", "assets/bohol.png", "assets/kawasan.png","assets/Boracay.png", "assets/bohol.png", "assets/kawasan.png","assets/Boracay.png", "assets/bohol.png", "assets/kawasan.png"],
+    "text1": ["Paradise Found: Exploring the Beauty", "Nature's Sweet Secrets:", "Chasing Waterfalls: Finding Serenity","Paradise Found: Exploring the Beauty", "Nature's Sweet Secrets:", "Chasing Waterfalls: Finding Serenity","Paradise Found: Exploring the Beauty", "Nature's Sweet Secrets:", "Chasing Waterfalls: Finding Serenity"],
+    "text2": ["of Boracay's White Sand Beaches", "The Majestic Chocolate Hills", "in the Wonders of Kawasan Falls","of Boracay's White Sand Beaches", "The Majestic Chocolate Hills", "in the Wonders of Kawasan Falls","of Boracay's White Sand Beaches", "The Majestic Chocolate Hills", "in the Wonders of Kawasan Falls",],
+    "profile": ["assets/lance.png", "assets/profile1.png", "assets/woman2.png","assets/lance.png", "assets/profile1.png", "assets/woman2.png","assets/lance.png", "assets/profile1.png", "assets/woman2.png"],
+    "text3": ["Lance Abella", "Sang Dong-Min", "Pan Bong","Lance Abella", "Sang Dong-Min", "Pan Bong","Lance Abella", "Sang Dong-Min", "Pan Bong"],
+    "text4": ["Feb 26, 2022", "Sep 9, 2022", "Jan 3,2022","Feb 26, 2022", "Sep 9, 2022", "Jan 3,2022","Feb 26, 2022", "Sep 9, 2022", "Jan 3,2022"],
   };
 
   Map<String, dynamic> smallCardContent = {
-    "shortbg": ["assets/short1.png", "assets/short1.png", "assets/short1.png"],
-    "shorttxt1": ["Top Trending", "Top Trending", "Top Trending"],
-    "shorttxt2": ["Islands in 2022", "Islands in 2022", "Islands in 2022"],
-    "shorttxt3": ["40,999", "40,999", "40,999"],
+    "shortbg": ["assets/top philippines.png", "assets/streetfoods.png", "assets/tradition.png","assets/top philippines.png", "assets/streetfoods.png", "assets/tradition.png","assets/top philippines.png", "assets/streetfoods.png", "assets/tradition.png"],
+    "shorttxt1": ["Wonders in", "Street Foods", "Timeless Filipino","Wonders in", "Street Foods", "Timeless Filipino","Wonders in", "Street Foods", "Timeless Filipino"],
+    "shorttxt2": ["the Philippines", "in the Philippines", "Traditions","the Philippines", "in the Philippines", "Traditions","the Philippines", "in the Philippines", "Traditions"],
+    "shorttxt3": ["98,349", "120,974", "624,312","98,349", "120,974", "624,312","98,349", "120,974", "624,312"],
   };
 
-  final List<Widget> postContent = [
-  Post1(), 
-  // Post2(),
-  // Post3(),
+  Map<String, dynamic> postContent = {
+    "index": [0, 1, 2, 0, 1, 2, 0, 1, 2],
+    "postbg": ["assets/postbgbora.png", "assets/postbohol.png", "assets/postkawasan.png", "assets/postbgbora.png", "assets/postbohol.png", "assets/postkawasan.png", "assets/postbgbora.png", "assets/postbohol.png", "assets/postkawasan.png"],
+    "posttxt1": ["Grateful for Boracay's stunning beauty.", "Bohol: Natural and Cultural Marvel.", "Kawasan: Nature's Serene Refreshment.", "Grateful for Boracay's stunning beauty.", "Bohol: Natural and Cultural Marvel.", "Kawasan: Nature's Serene Refreshment.", "Grateful for Boracay's stunning beauty.", "Bohol: Natural and Cultural Marvel.", "Kawasan: Nature's Serene Refreshment."],
+    "postprofile": ["assets/lance.png", "assets/profile1.png", "assets/woman2.png", "assets/lance.png", "assets/profile1.png", "assets/woman2.png", "assets/lance.png", "assets/profile1.png", "assets/woman2.png"],
+    "posttxt2": ["Lance Abella February 26 . 5 min read", "Sang Dong-Min September 9 . 7 min read", "Pan Bong January 3 . 3 min read", "Lance Abella February 26 . 5 min read", "Sang Dong-Min September 9 . 7 min read", "Pan Bong January 3 . 3 min read", "Lance Abella February 26 . 5 min read", "Sang Dong-Min September 9 . 7 min read", "Pan Bong January 3 . 3 min read"],    
+    "posttxt3": ["Visiting Boracay was like stepping into a postcard, with its pristine white sands and crystal-clear waters. It's a place where I discovered both tranquility and vibrant energy, leaving me with memories of a tropical paradise that will last a lifetime.", "Bohol's natural wonders, from the enchanting Chocolate Hills to the mesmerizing tarsiers in their sanctuaries, left me in awe of the Philippines' diverse beauty. Beyond its landscapes, the warmth and welcoming spirit of the Boholano people made my visit truly memorable.", "Kawasan Falls, with its cascading turquoise waters and lush surroundings, is a tropical paradise that soothes the soul and invigorates the spirit. The symphony of nature's sounds and the refreshing plunge into its cool pools create an unforgettable experience in the heart of Cebu.", "Visiting Boracay was like stepping into a postcard, with its pristine white sands and crystal-clear waters. It's a place where I discovered both tranquility and vibrant energy, leaving me with memories of a tropical paradise that will last a lifetime.", "Bohol's natural wonders, from the enchanting Chocolate Hills to the mesmerizing tarsiers in their sanctuaries, left me in awe of the Philippines' diverse beauty. Beyond its landscapes, the warmth and welcoming spirit of the Boholano people made my visit truly memorable.", "Kawasan Falls, with its cascading turquoise waters and lush surroundings, is a tropical paradise that soothes the soul and invigorates the spirit. The symphony of nature's sounds and the refreshing plunge into its cool pools create an unforgettable experience in the heart of Cebu.", "Visiting Boracay was like stepping into a postcard, with its pristine white sands and crystal-clear waters. It's a place where I discovered both tranquility and vibrant energy, leaving me with memories of a tropical paradise that will last a lifetime.", "Bohol's natural wonders, from the enchanting Chocolate Hills to the mesmerizing tarsiers in their sanctuaries, left me in awe of the Philippines' diverse beauty. Beyond its landscapes, the warmth and welcoming spirit of the Boholano people made my visit truly memorable.", "Kawasan Falls, with its cascading turquoise waters and lush surroundings, is a tropical paradise that soothes the soul and invigorates the spirit. The symphony of nature's sounds and the refreshing plunge into its cool pools create an unforgettable experience in the heart of Cebu."],    
+  };
+
   
-];
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +69,7 @@ class Homepage extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(left: 71, top: 73),
                     child: Text(
-                      "Monday, 3 October",
+                      "Saturday, 28 October",
                       style: TextStyle(
                         color: Color.fromRGBO(147, 151, 160, 1),
                         fontFamily: "Gellix",
@@ -180,8 +185,16 @@ class Homepage extends StatelessWidget {
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
-                      if (index < postContent.length) {
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => postContent[index]));
+                      if (index < postContent["index"].length) {
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context) => 
+                        Post(
+                          index:postContent["index"][index],
+                          postbg: postContent["postbg"][index],
+                          posttxt1: postContent["posttxt1"][index],
+                          postprofile: postContent["postprofile"][index],
+                          posttxt2: postContent["posttxt2"][index],
+                          posttxt3: postContent["posttxt3"][index],
+                        )));
                         }
                       },
                       child: Bigcard(

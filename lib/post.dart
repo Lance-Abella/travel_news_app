@@ -1,9 +1,25 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers, prefer_single_quotes, sized_box_for_whitespace
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_unnecessary_containers, prefer_single_quotes, sized_box_for_whitespace, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 
-class Post1 extends StatelessWidget {
-  const Post1({super.key});
+import 'homepage.dart';
+import 'profile.dart';
+
+class Post extends StatelessWidget {
+  final int index;
+  final String postbg;
+  final String posttxt1;
+  final String postprofile;
+  final String posttxt2;
+  final String posttxt3;
+
+  Post({ required this.index, required this.postbg, required this.posttxt1, required this.postprofile, required this.posttxt2, required this.posttxt3});
+
+  final List<Widget> profileContent = [
+  Profile1(), 
+  Profile2(),
+  Profile3(),
+];
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +28,15 @@ class Post1 extends StatelessWidget {
       child: Stack(
         children: [
           Container(                       
-            height: 600,
+            height: 500,
             width: 500,
             decoration: BoxDecoration(
               color: semiTransparentColor,
               image: DecorationImage(
-                image: AssetImage("assets/post1.png"),
+                image: AssetImage(postbg),
                 fit: BoxFit.cover,
               )
-            ),             
-            
+            ), 
           ),
 
           Container(
@@ -34,14 +49,19 @@ class Post1 extends StatelessWidget {
               ),
           ),
 
-          Container(
-            margin: EdgeInsets.only(left: 40, top: 63),                        
-            height: 15,
-            width: 8,             
-            child: Image(
-              image: AssetImage("assets/postBack.png"),
-              fit: BoxFit.cover,
-              ),
+          GestureDetector(
+            onTap: () {            
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => Homepage()));            
+          },
+            child: Container(
+              margin: EdgeInsets.only(left: 39, top: 63),                        
+              height: 15,
+              width: 15,             
+              child: Image(
+                image: AssetImage("assets/postBack.png"),
+                fit: BoxFit.cover,
+                ),
+            ),
           ),
 
           Container(
@@ -81,13 +101,13 @@ class Post1 extends StatelessWidget {
             decoration: BoxDecoration(             
               color: Color.fromRGBO(255, 255, 255, 1),
               borderRadius: BorderRadius.only(topLeft:Radius.circular(60), topRight: Radius.circular(60)),
-            ),                                    
+            ),
           ),
 
           Container(            
             margin: EdgeInsets.only(left: 30, top: 380),
             child: Text(
-              "Unravel mysteries of the Maldives",
+              posttxt1,
               style: TextStyle(
               fontFamily: "Gellix",
               fontSize: 32,
@@ -98,54 +118,66 @@ class Post1 extends StatelessWidget {
             ),
           ),
 
-          Container(
-            margin: EdgeInsets.only(left: 20, top: 470),                        
-            height: 54,
-            width: 315,             
-            child: Image(
-              image: AssetImage("assets/postbox.png"),
-              fit: BoxFit.cover,
-              ),
-          ),
-
-          Container(
-            margin: EdgeInsets.only(left: 32, top: 484),                        
-            height: 26,
-            width: 26,             
-            child: Image(
-              image: AssetImage("assets/postprofile.png"),
-              fit: BoxFit.cover,
-              ),
-          ),
-
-          Container(            
-            margin: EdgeInsets.only(left: 70, top: 490),
-            child: Text(
-              "Keanu Carpent May 17    8 min read",
-              style: TextStyle(
-              fontFamily: "Gellix",
-              fontSize: 13,
-              fontWeight: FontWeight.w400,
-              color: const Color.fromRGBO(147, 151, 160, 1),
-              decoration: TextDecoration.none,
-              )
+          GestureDetector(
+            onTap: () {
+            if (index < profileContent.length) {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => profileContent[index]));
+            }
+          },
+            child: Container(
+              margin: EdgeInsets.only(left: 20, top: 470),                        
+              height: 54,
+              width: 315,             
+              child: Image(
+                image: AssetImage("assets/postbox.png"),
+                fit: BoxFit.cover,
+                ),
             ),
           ),
 
-          Container(
-            margin: EdgeInsets.only(left: 206, top: 496),                        
-            height: 3,
-            width: 3,             
+         GestureDetector(
+          onTap: () {
+            if (index < profileContent.length) {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => profileContent[index]));
+            }
+          },
+          child: Container(
+            margin: EdgeInsets.only(left: 32, top: 484),
+            height: 26,
+            width: 26,
             child: Image(
-              image: AssetImage("assets/postdot.png"),
+              image: AssetImage(postprofile), 
               fit: BoxFit.cover,
-              ),
+            ),
           ),
+        ),
+
+
+          GestureDetector(
+            onTap: () {
+            if (index < profileContent.length) {
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => profileContent[index]));
+            }
+          },
+            child: Container(           
+              margin: EdgeInsets.only(left: 70, top: 490),
+              child: Text(
+                posttxt2,
+                style: TextStyle(
+                fontFamily: "Gellix",
+                fontSize: 13,
+                fontWeight: FontWeight.w400,
+                color: const Color.fromRGBO(147, 151, 160, 1),
+                decoration: TextDecoration.none,
+                )
+              ),
+            ),
+          ),          
 
           Container(            
-            margin: EdgeInsets.only(left: 30, top: 540),
+            margin: EdgeInsets.only(left: 20, top: 540, right: 20),
             child: Text(
-              "Just say anything, George, say what ever's natural, the first thing that comes to your mind. Take that you mutated son-of-a-bitch. My pine, why you. You space bastard, you killed a pine. You do? Yeah, it's 8:00. Hey, McFly, I thought I told you never",
+              posttxt3,
               style: TextStyle(
               fontFamily: "Gellix",
               fontSize: 16,
@@ -155,9 +187,7 @@ class Post1 extends StatelessWidget {
               )
             ),
           ),
-
           
-
           Container(
             margin: EdgeInsets.only(top: 650),
             child: Stack(

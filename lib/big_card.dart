@@ -17,15 +17,14 @@ class Bigcard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 5),
       child: Stack(
-        children: [
+        children: [ 
           Container(               
             height: 290,
             width: 255,
             decoration: BoxDecoration(
               color: const Color.fromRGBO(255, 255, 255, 1),
               borderRadius: BorderRadius.circular(10),
-            ), 
-                                   
+            ),                                    
           ),
       
           Container(   
@@ -66,7 +65,7 @@ class Bigcard extends StatelessWidget {
           ),
       
           Container(   
-            margin: EdgeInsets.only(left: 2, top: 220),
+            margin: EdgeInsets.only(left: 2, top: 222),
             height: 58,
             width: 58,              
             child: Image(
@@ -100,7 +99,7 @@ class Bigcard extends StatelessWidget {
           ),
       
           Container(   
-            margin: EdgeInsets.only(left: 205, top: 230),
+            margin: EdgeInsets.only(left: 205, top: 232),
             height: 37,
             width: 37,              
             child: Image(
@@ -111,7 +110,7 @@ class Bigcard extends StatelessWidget {
           ),
       
           Container(   
-            margin: EdgeInsets.only(left: 214, top: 242),
+            margin: EdgeInsets.only(left: 214, top: 244),
             height: 16.04,
             width: 16.04,              
             child: Image(

@@ -52,9 +52,9 @@ class Smallcard extends StatelessWidget {
           ),
 
           Container(   
-            margin: EdgeInsets.only(left: 42, top: 41),        
-            height: 16,
-            width: 16,             
+            margin: EdgeInsets.only(left: 44, top: 44),        
+            height: 12,
+            width: 12,             
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: Image(
