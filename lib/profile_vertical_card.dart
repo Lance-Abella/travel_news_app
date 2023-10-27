@@ -15,11 +15,8 @@ class Verticalcard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // margin: EdgeInsets.only(left: 30, top: 200),
       width: 330,
       height: 100,
-      // color: Colors.amber,
-
       child: Stack(
         children: [
           Container(   
